@@ -73,12 +73,24 @@ html {
     margin: 0.5rem 0;
 }
 
-.box {
-    width: 45%; /* 너비를 100%로 설정하여 부모 요소에 맞춤 */
-    margin: 1rem 0; /* 위쪽과 아래쪽 여백 */
+/* box style */
+
+/* .box {
+    width: 45%; 
+    margin: 1rem 0; 
     border: 1px solid #aaa;
     padding: 0.5rem;
-    border-radius: 5px; /* 모서리 둥글게 */
+    border-radius: 5px;
+} */
+
+/* new box style */
+.box {
+    width: 45%;                 /* 너비를 100%로 설정하여 부모 요소에 맞춤 */
+    margin: 1rem 0;             /* 위쪽과 아래쪽 여백 */
+    border: 2px solid #444;
+    padding: 0.5rem;            /* between border and contents (rem, px)
+    /* padding: 15px;            /* between border and contents (rem, px) */
+    border-radius: 5px;         /* rounding of border */
 }
 
 /* box size according to screen size  */
