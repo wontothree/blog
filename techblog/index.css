@@ -19,13 +19,6 @@
     font-family: sans-serif;
 }
 
-/* link style */
-a {
-    text-decoration: none;
-    color: inherit;
-    color: #888;
-}
-
 /* font size according to screen size */
 html {
     font-size: 16px;
@@ -42,23 +35,34 @@ html {
     }
 }
 
-/* custom */
+/* ------------------------------  custom ------------------------------ */
 
-/* Classs "base" */
-.base {
-    /* width: fit-content; */
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* padding: 0.5rem; */
-    align-items: center;
-    margin: 0.5rem 0;
+/* -------------------- Tag style -------------------- */
+
+/* link style */
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* footor */
 footer {
     text-align: center;
+    color: inherit;
+}
+
+/* -------------------- Class style -------------------- */
+
+/* Classs "base" */
+.base {
+    width: 100%;
+    max-width: 800px;            /* 화면 폭 제한 */
+    margin: 0 auto;              /* 가운데 정렬 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5rem;
+    align-items: center;
 }
 
 /* Box */
