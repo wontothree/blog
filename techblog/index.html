@@ -1,77 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Technical Blog">
-    <meta name="author" content="Anthony Garcia">
-    <title>Garcia's Technical Blog</title>
-    <link rel="stylesheet" href="./assets/index.css"/>
-</head>
 <body>
-    <header class="header">
-        <br><br>
-    </header>
-    
-    <div class="base">
-        <h1>Technical Blog</h1>
+  <header class="header">
+    <br><br>
+  </header>
 
-        <br><br>
+  <!-- 블로그 리스트 -->
+  <div class="base" id="post-list">
+    <h1>Technical Blog</h1>
+    <br><br>
 
-        <a href="?path=a" style="display: block;">
-            <div style="display: flex; justify-content: space-between; margin: 5px 0;">
-                <span>How to survive in Republic of Korea Army 1</span>
-                <span style="font-weight: normal;">05-06-2025</span>
-            </div>
-        </a>
+    <a href="?path=a" style="display: block;">
+      <div style="display: flex; justify-content: space-between; margin: 5px 0;">
+        <span>How to survive in Republic of Korea Army 1</span>
+        <span style="font-weight: normal;">05-06-2025</span>
+      </div>
+    </a>
 
-        <a href="?path=b" style="display: block;">
-            <div style="display: flex; justify-content: space-between; margin: 5px 0;">
-                <span>How to survive in Republic of Korea Army 2</span>
-                <span style="font-weight: normal;">06-06-2025</span>
-            </div>
-        </a>
+    <a href="?path=b" style="display: block;">
+      <div style="display: flex; justify-content: space-between; margin: 5px 0;">
+        <span>How to survive in Republic of Korea Army 2</span>
+        <span style="font-weight: normal;">06-06-2025</span>
+      </div>
+    </a>
 
-        <a href="?path=opic">
-            <div style="display: flex; justify-content: space-between; margin: 5px 0;">
-                <span>OPIC</span>
-                <span style="font-weight: normal;">06-06-2025</span>
-            </div>
-        </a>
+    <a href="?path=opic">
+      <div style="display: flex; justify-content: space-between; margin: 5px 0;">
+        <span>OPIC</span>
+        <span style="font-weight: normal;">06-06-2025</span>
+      </div>
+    </a>
+  </div>
 
-    </div>
+  <!-- 마크다운 렌더링 영역 -->
+  <div class="base" id="content" style="display: none;"></div>
 
-    <br><br> 
+  <br><br>
 
-    <footer style="padding: 20px;">
-        &copy; 2025 Anthony Garcia
-    </footer>
+  <footer style="padding: 20px;">
+    &copy; 2025 Anthony Garcia
+  </footer>
 
-    <!-- ***** -->
-    <script src="./assets/parser.js"></script>
-    <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const path = urlParams.get('path');
+  <script src="./assets/parser.js"></script>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const path = urlParams.get('path');
 
-        if (path) {
-        // content 영역 덮어쓰기 전 백업
-        const contentEl = document.getElementById('content');
-        contentEl.innerHTML = '<p>Loading...</p>';
+    if (path) {
+      const contentEl = document.getElementById('content');
+      const postListEl = document.getElementById('post-list');
 
-        fetch(`./posts/${path}/index.md`)
-            .then(response => {
-            if (!response.ok) throw new Error("Failed to load Markdown");
-            return response.text();
-            })
-            .then(md => {
-            const html = parse_markdown_to_html(md);
-            contentEl.innerHTML = html;
-            })
-            .catch(err => {
-            contentEl.innerHTML = '<p style="color: red;">Markdown file not found.</p>';
-            console.error(err);
-            });
-        }
-    </script>
+      contentEl.style.display = 'block';
+      postListEl.style.display = 'none';
+      contentEl.innerHTML = '<p>Loading...</p>';
+
+      fetch(`./posts/${path}/index.md`)
+        .then(response => {
+          if (!response.ok) throw new Error("Failed to load Markdown");
+          return response.text();
+        })
+        .then(md => {
+          const html = parse_markdown_to_html(md);
+          contentEl.innerHTML = html;
+        })
+        .catch(err => {
+          contentEl.innerHTML = '<p style="color: red;">Markdown file not found.</p>';
+          console.error(err);
+        });
+    }
+  </script>
 </body>
-</html>
