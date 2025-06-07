@@ -1,12 +1,12 @@
 # Simple Pages
 
-Garcia's hub pages and career pages using no dependencies (no framework, no library), just varnila javascript, html, and css.
-
-It include parsing engine from Markdown and LaTex to HTML.
-
 - [https://wontothree.github.io/](https://wontothree.github.io/)
 - [https://wontothree.github.io/career/](https://wontothree.github.io/career/)
 - [https://wontothree.github.io/techblog/](https://wontothree.github.io/techblog/)
+
+Garcia's hub pages and career pages using no dependencies (no framework, no library), just varnila javascript, html, and css.
+
+It include parsing engine from Markdown and LaTex to HTML.
 
     wontothree.github.io
     ├── blog
@@ -14,19 +14,19 @@ It include parsing engine from Markdown and LaTex to HTML.
     │   │   ├── imgs
     │   │   ├── index.css
     |   │   └── index.html
-    |   │   
+    |   │
     │   └── index.js.map
-    │   
+    │
     ├── career
     │   │   ├── imgs
     │   │   ├── posts
     |   │   │   └── uos
     |   |   │       ├── index.css
     |   |   |       └── index.html
-    |   │   │   
+    |   │   │
     │   │   ├── index.css
     |   │   └── index.html
-    |   
+    |
     ├── imgs
     |
     ├── techblog/
@@ -41,7 +41,7 @@ It include parsing engine from Markdown and LaTex to HTML.
     |   │   └── parser.js
     |   |
     │   └── index.html
-    │   
+    │
     ├── index.css
     └── index.html
 
