@@ -1,6 +1,40 @@
 # Simple Pages
 
-Garcia's hub pages and career pages using no dependencies (no framework, no library), just javascript, html, and css
+Garcia's hub pages and career pages using no dependencies (no framework, no library), just varnila javascript, html, and css
+
+    wontothree.github.io
+    ├── blog
+    │   ├── roka
+    │   │   ├── imgs
+    │   │   ├── index.css
+    |   │   └── index.html
+    |   │   
+    │   └── index.js.map
+    │   
+    ├── career
+    │   │   ├── imgs
+    │   │   ├── posts
+    |   │   │   └── uos
+    |   |   │       ├── index.css
+    |   |   |       └── index.html
+    |   │   │   
+    │   │   ├── index.css
+    |   │   └── index.html
+    |   │   
+    ├── imgs
+    |
+    ├── techblog/
+    │   ├── posts/
+    |   │   ├── a/
+    |   │   │   └── index.md
+    |   │   └── b/
+    |   │       └── index.md
+    |   |
+    │   ├── index.css
+    │   └── index.html
+    │   
+    ├── index.css
+    └── index.html
 
 # To do
 
