@@ -23,11 +23,11 @@
 html {
     font-size: 16px;
 }
-@media (max-width: 1440px) { html { font-size: 14px; } }
+@media (max-width: 1440px) { html { font-size: 13px; } }
 @media (max-width: 1200px) { html { font-size: 13px; } }
-@media (max-width: 1024px) { html { font-size: 12px; } }
-@media (max-width: 768px) { html { font-size: 11px; } }
-@media (max-width: 480px) { html { font-size: 10px; } }
+@media (max-width: 1024px) { html { font-size: 13px; } }
+@media (max-width: 768px) { html { font-size: 13px; } }
+@media (max-width: 480px) { html { font-size: 12px; } }
 
 @media print {
     html {
@@ -56,8 +56,8 @@ footer {
 /* Classs "base" */
 .base {
     width: 100%;
-    max-width: 800px;            /* 화면 폭 제한 */
-    margin: 0 auto;              /* 가운데 정렬 */
+    max-width: 900px;             /* 화면 폭 제한 */
+    margin: 0 auto;               /* 가운데 정렬 */
     display: flex;
     flex-direction: column;
     justify-content: center;
