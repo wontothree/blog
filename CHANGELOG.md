@@ -32,4 +32,13 @@ After
 
 ## *06/07/2025*
 
-add folder "techblog"
+1. add folder "techblog"
+2. markdown to html parser
+
+assets/parser.js를 작성한다.
+
+client가 index.html에서 fetch로 .md 읽어 JS로 변환 후 렌더링한다.
+
+목표: folder posts에는 제목에 해당하는 폴더와 그 안에 md 파일만이 있다. 이를 미리 html 파일로 생성하지 않고 알아서 html로 변환한다.
+
+techblog의 root 경로에 있는 index.html 하나로 모든 글을 rendering하자.

@@ -1,6 +1,8 @@
 # Simple Pages
 
-Garcia's hub pages and career pages using no dependencies (no framework, no library), just varnila javascript, html, and css
+Garcia's hub pages and career pages using no dependencies (no framework, no library), just varnila javascript, html, and css.
+
+It include parsing engine from Markdown and LaTex to HTML.
 
     wontothree.github.io
     ├── blog
@@ -20,7 +22,7 @@ Garcia's hub pages and career pages using no dependencies (no framework, no libr
     |   │   │   
     │   │   ├── index.css
     |   │   └── index.html
-    |   │   
+    |   
     ├── imgs
     |
     ├── techblog/
@@ -30,7 +32,10 @@ Garcia's hub pages and career pages using no dependencies (no framework, no libr
     |   │   └── b/
     |   │       └── index.md
     |   |
-    │   ├── index.css
+    │   ├── assets/
+    |   │   ├── index.css
+    |   │   └── parser.js
+    |   |
     │   └── index.html
     │   
     ├── index.css
