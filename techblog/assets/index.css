@@ -19,15 +19,15 @@
     font-family: sans-serif;
 }
 
-/* font size according to screen size */
+/* font size by screen size */
 html {
-    font-size: 16px;
+    font-size: 18px;
 }
-@media (max-width: 1440px) { html { font-size: 15px; } }
-@media (max-width: 1200px) { html { font-size: 15px; } }
-@media (max-width: 1024px) { html { font-size: 15px; } }
-@media (max-width: 768px) { html { font-size: 15px; } }
-@media (max-width: 480px) { html { font-size: 15px; } }
+@media (max-width: 1440px) { html { font-size: 18px; } }
+@media (max-width: 1200px) { html { font-size: 18px; } }
+@media (max-width: 1024px) { html { font-size: 18px; } }
+@media (max-width: 768px) { html { font-size: 18px; } }
+@media (max-width: 480px) { html { font-size: 18px; } }
 
 @media print {
     html {
