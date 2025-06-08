@@ -13,68 +13,52 @@
     <br><br>
   </header>
 
-  <!-- 블로그 리스트 -->
-  <div class="base" id="post-list">
+  <div class="base">
     <h1>Technical Blog</h1>
     <br><br>
 
-    <a href="?path=a" style="display: block;">
-      <div style="display: flex; justify-content: space-between; margin: 5px 0;">
-        <span>How to survive in Republic of Korea Army 1</span>
-        <span style="font-weight: normal;">05-06-2025</span>
-      </div>
-    </a>
+    <!-- Technical Blog Post List -->
+    <div id="post-list" style="width: 100%;">
+      <a href="?path=a">
+        <div style="display: flex; justify-content: space-between; margin: 5px 0;">
+          <span>How to survive in Republic of Korea Army 1</span>
+          <span style="font-weight: normal;">05-06-2025</span>
+        </div>
+      </a>
 
-    <a href="?path=b" style="display: block;">
-      <div style="display: flex; justify-content: space-between; margin: 5px 0;">
-        <span>How to survive in Republic of Korea Army 2</span>
-        <span style="font-weight: normal;">06-06-2025</span>
-      </div>
-    </a>
+      <a href="?path=b">
+        <div style="display: flex; justify-content: space-between; margin: 5px 0;">
+          <span>How to survive in Republic of Korea Army 2</span>
+          <span style="font-weight: normal;">06-06-2025</span>
+        </div>
+      </a>
 
-    <a href="?path=opic">
-      <div style="display: flex; justify-content: space-between; margin: 5px 0;">
-        <span>OPIC</span>
-        <span style="font-weight: normal;">06-06-2025</span>
-      </div>
-    </a>
+      <a href="?path=opic">
+        <div style="display: flex; justify-content: space-between; margin: 5px 0;">
+          <span>OPIC</span>
+          <span style="font-weight: normal;">06-06-2025</span>
+        </div>
+      </a>
+
+      <a href="?path=blog">
+        <div style="display: flex; justify-content: space-between; margin: 5px 0;">
+          <span>Markdown, LaTeX, and HTML</span>
+          <span style="font-weight: normal;">06-08-2025</span>
+        </div>
+      </a>
+    </div>
   </div>
 
-  <!-- 마크다운 렌더링 영역 -->
-  <div class="base" id="content" style="display: none;"></div>
+  <!-- Markdown Rendering Region by Single Page Application -->
+  <div class="base">
+    <div id="content" style="display: none;"></div>
+  </div>
 
-  <br><br>
+  <br>
 
   <footer style="padding: 20px;">
     &copy; 2025 Anthony Garcia
   </footer>
 
   <script src="./assets/parser.js"></script>
-  <script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const path = urlParams.get('path');
-
-    if (path) {
-      const contentEl = document.getElementById('content');
-      const postListEl = document.getElementById('post-list');
-
-      contentEl.style.display = 'block';
-      postListEl.style.display = 'none';
-      contentEl.innerHTML = '<p>Loading...</p>';
-
-      fetch(`./posts/${path}/index.md`)
-        .then(response => {
-          if (!response.ok) throw new Error("Failed to load Markdown");
-          return response.text();
-        })
-        .then(md => {
-          const html = parse_markdown_to_html(md);
-          contentEl.innerHTML = html;
-        })
-        .catch(err => {
-          contentEl.innerHTML = '<p style="color: red;">Markdown file not found.</p>';
-          console.error(err);
-        });
-    }
-  </script>
 </body>
