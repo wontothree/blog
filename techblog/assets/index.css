@@ -21,13 +21,13 @@
 
 /* font size by screen size */
 html {
-    font-size: 18px;
+    font-size: 13px;
 }
-@media (max-width: 1440px) { html { font-size: 18px; } }
+/* @media (max-width: 1440px) { html { font-size: 18px; } }
 @media (max-width: 1200px) { html { font-size: 18px; } }
 @media (max-width: 1024px) { html { font-size: 18px; } }
 @media (max-width: 768px) { html { font-size: 18px; } }
-@media (max-width: 480px) { html { font-size: 18px; } }
+@media (max-width: 480px) { html { font-size: 18px; } } */
 
 @media print {
     html {
