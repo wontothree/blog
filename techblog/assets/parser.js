@@ -88,6 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error(err);
         });
 
+        
     // 마크다운 로딩 함수
     function loadMarkdown(path) {
         postListEl.style.display = 'none';
