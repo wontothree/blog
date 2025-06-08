@@ -37,55 +37,29 @@ if (typeof module !== 'undefined' && module.exports) {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  const urlParams = new URLSearchParams(window.location.search);
-const path = urlParams.get('path');
+    const urlParams = new URLSearchParams(window.location.search);
+    const path = urlParams.get('path');
 
-if (path) {
-    const contentEl = document.getElementById('content');
-    const postListEl = document.getElementById('post-list');
+    if (path) {
+        const contentEl = document.getElementById('content');
+        const postListEl = document.getElementById('post-list');
 
-    contentEl.style.display = 'block';
-    postListEl.style.display = 'none';
-    contentEl.innerHTML = '<p>Loading...</p>';
+        contentEl.style.display = 'block';
+        postListEl.style.display = 'none';
+        contentEl.innerHTML = '<p>Loading...</p>';
 
-    fetch(`./posts/${path}/index.md`)
-    .then(response => {
-        if (!response.ok) throw new Error("Failed to load Markdown");
-        return response.text();
-    })
-    .then(md => {
-        const html = parseMarkdownToHtml(md);
-        contentEl.innerHTML = html;
-    })
-    .catch(err => {
-        contentEl.innerHTML = '<p style="color: red;">Markdown file not found.</p>';
-        console.error(err);
-    });
-}
-
+        fetch(`./posts/${path}/index.md`)
+        .then(response => {
+            if (!response.ok) throw new Error("Failed to load Markdown");
+            return response.text();
+        })
+        .then(md => {
+            const html = parseMarkdownToHtml(md);
+            contentEl.innerHTML = html;
+        })
+        .catch(err => {
+            contentEl.innerHTML = '<p style="color: red;">Markdown file not found.</p>';
+            console.error(err);
+        });
+    }
 });
-// const urlParams = new URLSearchParams(window.location.search);
-// const path = urlParams.get('path');
-
-// if (path) {
-//     const contentEl = document.getElementById('content');
-//     const postListEl = document.getElementById('post-list');
-
-//     contentEl.style.display = 'block';
-//     postListEl.style.display = 'none';
-//     contentEl.innerHTML = '<p>Loading...</p>';
-
-//     fetch(`./posts/${path}/index.md`)
-//     .then(response => {
-//         if (!response.ok) throw new Error("Failed to load Markdown");
-//         return response.text();
-//     })
-//     .then(md => {
-//         const html = parseMarkdownToHtml(md);
-//         contentEl.innerHTML = html;
-//     })
-//     .catch(err => {
-//         contentEl.innerHTML = '<p style="color: red;">Markdown file not found.</p>';
-//         console.error(err);
-//     });
-// }
