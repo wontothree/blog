@@ -1,10 +1,10 @@
 # Simple Pages
 
+Garcia's hub pages and career pages using no dependencies (no framework, no library), just varnila javascript, html, and css.
+
 - [https://wontothree.github.io/](https://wontothree.github.io/)
 - [https://wontothree.github.io/career/](https://wontothree.github.io/career/)
 - [https://wontothree.github.io/techblog/](https://wontothree.github.io/techblog/)
-
-Garcia's hub pages and career pages using no dependencies (no framework, no library), just varnila javascript, html, and css.
 
 It include parsing engine from Markdown and LaTex to HTML.
 
@@ -30,21 +30,37 @@ It include parsing engine from Markdown and LaTex to HTML.
     ├── imgs
     |
     ├── techblog/
-    │   ├── posts/
-    |   │   ├── a/
-    |   │   │   └── index.md
-    |   │   └── b/
-    |   │       └── index.md
-    |   |
     │   ├── assets/
     |   │   ├── index.css
     |   │   └── parser.js
+    │   ├── posts/
+    |   │   ├── making-personal-blog/
+    |   │   │   └── 2025-07-09-en.md
+    |   │   └── test/
+    |   │       └── 2025-06-09-ko.md
     |   |
-    │   └── index.html
+    │   ├── index.html
+    │   └── posts-meta.json
     │
     ├── index.css
     └── index.html
 
+# Getting Started
+
+## Local server
+
+```bash
+python -m http.server 8000
+```
+
+[http://localhost:8000](http://localhost:8000)
+
+## Posting
+
+1. `posts/` 경로에 게시물 제목으로 폴더를 생성한다. 이때 띄어쓰기는 hyphen으로 대체한다. 그러면 이 제목으로 blog에 자동으로 게시뮬 링크가 생성된다. e.g. `making-personal-blog`
+2. `posts/making-personal-blog`에 `2025-07-09-en.md`와 같은 양식으로 markdown file을 만든다. 이때 날짜와 시간을 표기하는 국제 규격 ISO 8601 `YYYY-MM-DD`를 따른다.
+
 # To do
 
 * [ ] engine parsing markdown to html
+* [ ] 특정 폴더에 markdown file만 생성하면 자동으로 새 글이 게시되도록 하기
