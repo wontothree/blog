@@ -1,4 +1,3 @@
-
 [
   {
     "folder": "making-personal-blog",
@@ -6,7 +5,30 @@
 
     "title": "Making Personal Blog",
     "date": "2025-06-08",
-    "language": "ko",
-    "categories": ["blog", "personal"]
+    "language": "ko"
+  },
+  {
+    "folder": "test1",
+    "filename": "2025-06-08-ko.md",
+
+    "title": "Test1",
+    "date": "2025-06-08",
+    "language": "ko"
+  },
+  {
+    "folder": "test2",
+    "filename": "2025-06-08-ko.md",
+
+    "title": "Test2",
+    "date": "2025-06-08",
+    "language": "ko"
+  },
+  {
+    "folder": "test3",
+    "filename": "2025-06-08-ko.md",
+
+    "title": "Test3",
+    "date": "2025-06-08",
+    "language": "ko"
   }
 ]

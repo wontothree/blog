@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
             contentEl.style.display = 'none';
 
             // 목록 생성
-            postListEl.innerHTML = posts.map((post, index) => {
+            postListEl.innerHTML = posts.map(post => {
                 const title = post.title;
                 const date = post.date;
                 const folder = post.folder;
@@ -80,24 +80,42 @@ document.addEventListener('DOMContentLoaded', () => {
             const urlParams = new URLSearchParams(window.location.search);
             const initialPath = urlParams.get('path');
             if (initialPath) {
-                loadMarkdown(initialPath);
+                loadMarkdown(initialPath, false);
             }
         })
-        .catch(err => {
+        .catch(error => {
             postListEl.innerHTML = '<p style="color: red;">Failed to load post list.</p>';
-            console.error(err);
+            console.error(error);
         });
 
+    // 뒤로 가기(또는 앞으로 가기) 했을 때 페이지 전환 처리
+    window.addEventListener('popstate', () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const path = urlParams.get('path');
+
+        if (path) {
+            loadMarkdown(path, true); // popstate에선 history 추가 X
+        } else {
+            // 목록 화면으로 전환
+            postListEl.style.display = 'block';
+            contentEl.style.display = 'none';
+            contentEl.innerHTML = '';
+        }
+    });
         
+
+
     // 마크다운 로딩 함수
-    function loadMarkdown(path) {
+    function loadMarkdown(path, skipPushState = false) {
         postListEl.style.display = 'none';
         contentEl.style.display = 'block';
         contentEl.innerHTML = '<p>Loading...</p>';
 
-        // 주소창 path 갱신 (리로드 없이)
-        const newUrl = `${window.location.pathname}?path=${encodeURIComponent(path)}`;
-        window.history.pushState({}, '', newUrl);
+        // 주소창 갱신: popstate일 때는 pushState 하지 말 것!
+        if (!skipPushState) {
+            const newUrl = `${window.location.pathname}?path=${encodeURIComponent(path)}`;
+            window.history.pushState({}, '', newUrl);
+        }
 
         fetch(path)
             .then(response => {
@@ -105,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return response.text();
             })
             .then(md => {
-                const html = parseMarkdownToHtml(md); // 마크다운 파싱 함수 필요
+                const html = parseMarkdownToHtml(md);
                 contentEl.innerHTML = html;
             })
             .catch(err => {
@@ -113,4 +131,5 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.error(err);
             });
     }
+
 });
