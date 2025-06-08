@@ -39,14 +39,6 @@ html {
 
 /* -------------------- Tag style -------------------- */
 
-/* link style */
-a {
-    width: 100%;
-    text-decoration: none;
-    color: inherit;
-    display: block;
-}
-
 /* footor */
 footer {
     text-align: center;
@@ -57,11 +49,7 @@ footer {
 
 /* Classs "base" */
 .base {
-    max-width: 50%;               /* 화면 폭 제한 */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: center; */
-    /* align-items: center; */
+    width: clamp(32rem, 50%, 70rem);
     padding: 0.5rem;
     margin: 0 auto;               /* 가운데 정렬 */
 }

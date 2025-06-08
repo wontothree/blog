@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const filePath = `posts/${folder}/${date}-${lang}.md`;
 
                 return `
-                    <div class="post-link" data-path="${filePath}" style="cursor: pointer; display: flex; justify-content: space-between; margin: 5px 0;">
+                    <div class="post-link" data-path="${filePath}" style="cursor: pointer; display: flex; justify-content: space-between; white-space: nowrap; margin: 5px 0;">
                         <span>${title}</span>
                         <span style="font-weight: normal;">${date}</span>
                     </div>
