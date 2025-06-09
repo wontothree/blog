@@ -3,86 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Anthony Garcia">
+    <meta name="description" content="Anthony Garcia's Blog">
     <meta name="author" content="Anthony Garcia">
-    <title>Anthony Garcia</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Anthony Garcia's Blog</title>
+    <link rel="stylesheet" href="./assets/index.css">
 </head>
 <body>
-    <header class="header">
-        <br>
-        <br>
-    </header>
-    
-    <div class="base">
-        <h1>Anthony Garcia</h1>
+  <header class="header"></header>
+  
+  <br>
 
-        <div class="box" style="display: flex; align-items: center;">
-            <img src="./imgs/profile.png" style="width:30%; height:auto; margin-right: 20px;">
-            <div>
-                <p>
-                    My korean name is Sewon Kim, but I gave myself the name "Anthony Garcia". (I changed my last name without my parents' approval...) I'm 23 years old in international age and originally from Seoul, South Korea 🇰🇷. 
-                </p>
-                <p>
-                    I have a passion for jazz and heavy metal, and I enjoy playing both acoustic and electric guitar 🎸.
-                </p>
+  <!--  Single Page Application -->
+  <div class="base">
+    <h2 style="white-space: nowrap;">Anthony Garcia's Blog</h2>
 
-                <div>- sometimes traveler and usually engineer</div>
-                <div>- ENFJ, but ENTJ in work</div>
-                <div>- Positive and (wanna be) outgoing</div>
+    <p>----------------------------------------------------------------------</p>
 
-                <p>
-                    This page is like diary to me.
-                </p>
+    <div id="profile" class="box" style="display: flex; align-items: center;">
+        <img src="./profile.png" style="width:30%; height:auto; margin-right: 20px;">
+        <div>
+            <p>
+                My korean name is Sewon Kim, but I gave myself the name "Anthony Garcia". I'm 23 years old in international age and originally from Seoul, South Korea 🇰🇷. 
+            </p>
+            <p>
+                I have a passion for jazz and heavy metal, and I enjoy playing both acoustic and electric guitar 🎸.
+            </p>
 
-                <div>prepared7913@gmail.com</div>
+            <div>#ENFJ</div>
 
-                <div style="display: flex; gap: 10px;">
-                    <a href="https://www.instagram.com/won_to_three/">
-                        <div>Instagram</div>
-                    </a>
+            <div style="display: flex; gap: 10px;">
+                <div>#prepared7913@gmail.com</div>
+                
+                <a href="https://www.instagram.com/won_to_three/"><div>#Instagram</div></a>
 
-                    <a href="https://wontothree.github.io/career/">
-                        <div>Career</div>
-                    </a>
-                </div>
+                <a href="https://wontothree.github.io/career/"><div>#Career</div></a>
             </div>
         </div>
-
-        <h1>Blog</h1>
-
-        <!-- <a href="./posts/christmas-market/" class="box" style="text-decoration:none; color:inherit;">
-            <h3 style="display: flex; justify-content: space-between;">
-                <span>Alone, Trains, Europe, and Christmas Markets</span>
-                <span style="font-weight: normal;">May 11 2025</span>
-            </h3>
-        </a> -->
-
-        <!-- <a href="./posts/journey/" class="box" style="text-decoration:none; color:inherit;">
-            <h3 style="display: flex; justify-content: space-between;">
-                <span>Life is a Journey</span>
-                <span style="font-weight: normal;">May 07 2025</span>
-            </h3>
-        </a> -->
-
-        <!-- <a href="./posts/opic/" class="box" style="text-decoration:none; color:inherit;">
-            <h3 style="display: flex; justify-content: space-between;">
-                <span>Oral Proficiency Interview, Computer - Advanced Low</span>
-                <span style="font-weight: normal;">May 06 2025</span>
-            </h3>
-        </a> -->
-        
-        <a href="./blog/roka/" class="box" style="text-decoration:none; color:inherit;">
-            <h3 style="display: flex; justify-content: space-between;">
-                <span>How to survive in Republic of Korea Army</span>
-                <span style="font-weight: normal;">May 06 2025</span>
-            </h3>
-        </a>
-
     </div>
+    
+    <!-- Post List -->
+    <div id="post-list" style="width: 100%;"></div>
 
-    <footer style="text-align: center; padding: 20px; font-size: 0.9em; color: #777;">
-        &copy; 2025 Anthony Garcia
-    </footer>    
+    <!-- Post by Markdown Rendering -->
+    <div id="content" style="width: 100%; display: none;"></div>
+  </div>
+
+  <br>
+
+  <footer style="padding: 20px;">&copy; 2025 Anthony Garcia</footer>
+
+  <script src="./assets/parser.js"></script>
 </body>
-</html>
+
+
