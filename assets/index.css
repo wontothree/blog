@@ -43,6 +43,11 @@ html {
 
 /* -------------------- Tag style -------------------- */
 
+a {
+    text-decoration: none;
+    color: #888;
+}
+
 /* footor */
 footer {
     text-align: center;
