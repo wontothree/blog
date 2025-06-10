@@ -1,12 +1,5 @@
-[
-  {
-    "folder": "how-to-build-blog-from-a-to-z",
-    "filename": "2025-06-08-ko.md",
-    "title": "블로그를 직접 만드는 방법",
-    "date": "2025-06-08",
-    "language": "ko"
-  },
 
+[
   {
     "folder": "test1",
     "filename": "2025-06-08-ko.md",
@@ -28,6 +21,13 @@
     "filename": "2025-06-08-ko.md",
 
     "title": "Test3",
+    "date": "2025-06-08",
+    "language": "ko"
+  },
+  {
+    "folder": "how-to-build-blog-from-a-to-z",
+    "filename": "2025-06-08-ko.md",
+    "title": "LaTeX 컴파일부터 디자인까지 블로그를 직접 만드는 방법",
     "date": "2025-06-08",
     "language": "ko"
   }
