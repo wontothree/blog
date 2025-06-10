@@ -4,7 +4,6 @@ Garcia's hub pages and career pages using no dependencies (no framework, no libr
 
 - [https://wontothree.github.io/](https://wontothree.github.io/)
 - [https://wontothree.github.io/career/](https://wontothree.github.io/career/)
-- [https://wontothree.github.io/techblog/](https://wontothree.github.io/techblog/)
 
 It include parsing engine from Markdown and LaTex to HTML.
 
@@ -28,20 +27,6 @@ It include parsing engine from Markdown and LaTex to HTML.
     |   │   └── index.html
     |
     ├── imgs
-    |
-    ├── techblog/
-    │   ├── assets/
-    |   │   ├── index.css
-    |   │   └── parser.js
-    │   ├── posts/
-    |   │   ├── making-personal-blog/
-    |   │   │   └── 2025-07-09-en.md
-    |   │   └── test/
-    |   │       └── 2025-06-09-ko.md
-    |   |
-    │   ├── index.html
-    │   └── posts-meta.json
-    │
     ├── index.css
     └── index.html
 
