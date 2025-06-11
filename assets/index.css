@@ -23,30 +23,57 @@ body, html, #root {
 
 }
 
+
 /* font size by screen size */
 html {
-    font-size: 20px;
+font-size: 20px; /* 16 */
 }
-@media (max-width: 1440px) { html { font-size: 20px; } }
-@media (max-width: 1200px) { html { font-size: 20px; } }
-@media (max-width: 1024px) { html { font-size: 20px; } }
-@media (max-width: 768px) { html { font-size: 20px; } }
-@media (max-width: 480px) { html { font-size: 16px; } }
 
-/* @media print {
-    html {
-        font-size: 10px;
-    }
-} */
+/* width < 1440px */
+@media (max-width: 1440px) {
+html {
+    font-size: 20px; /* 14 */
+}
+}
+
+/* width < 1200px */
+@media (max-width: 1200px) {
+html {
+    font-size: 20px; /* 13 */
+}
+}
+
+/* width < 1024px */
+@media (max-width: 1024px) {
+html {
+    font-size: 20px; /* 12 */
+}
+}
+
+/* width < 768px */
+@media (max-width: 768px) {
+html {
+    font-size: 20px; /* 11 */
+}
+}
+
+/* width < 480px */
+@media (max-width: 480px) {
+html {
+    font-size: 12px;
+}
+}
+
+/* print */
+@media print {
+html {
+    font-size: 12px;
+}
+}
 
 /* ------------------------------  custom ------------------------------ */
 
 /* -------------------- Tag style -------------------- */
-
-a {
-    text-decoration: none;
-    color: #888;
-}
 
 /* footor */
 footer {
@@ -58,7 +85,7 @@ footer {
 
 /* Classs "base" */
 .base {
-    width: clamp(24rem, 50%, 70rem);
+    width: clamp(24rem, min(95%, 45rem), 70rem);
     padding: 0.3rem;
     margin: 0 auto;               /* 가운데 정렬 */
 }
@@ -85,9 +112,3 @@ footer {
         width: 92%;
     }
 }
-
-/* @media (max-width: 480px) {
-    .box {
-        width: 95%;
-    }
-} */
