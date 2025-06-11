@@ -26,34 +26,34 @@ body, html, #root {
 
 /* font size by screen size */
 html {
-font-size: 20px; /* 16 */
+    font-size: 16px;
 }
 
 /* width < 1440px */
 @media (max-width: 1440px) {
 html {
-    font-size: 20px; /* 14 */
+    font-size: 16px;
 }
 }
 
 /* width < 1200px */
 @media (max-width: 1200px) {
 html {
-    font-size: 20px; /* 13 */
+    font-size: 16px;
 }
 }
 
 /* width < 1024px */
 @media (max-width: 1024px) {
 html {
-    font-size: 20px; /* 12 */
+    font-size: 16px;
 }
 }
 
 /* width < 768px */
 @media (max-width: 768px) {
 html {
-    font-size: 20px; /* 11 */
+    font-size: 16px;
 }
 }
 
@@ -85,7 +85,7 @@ footer {
 
 /* Classs "base" */
 .base {
-    width: clamp(24rem, min(95%, 45rem), 70rem);
+    width: min(min(95%, 60rem), 70rem);
     padding: 0.3rem;
     margin: 0 auto;               /* 가운데 정렬 */
 }
@@ -112,3 +112,9 @@ footer {
         width: 92%;
     }
 }
+
+/* @media (max-width: 480px) {
+    .box {
+        width: 95%;
+    }
+} */
