@@ -2,9 +2,6 @@
 
 Garcia's hub pages and career pages using no dependencies (no framework, no library), just varnila javascript, html, and css.
 
-- [https://wontothree.github.io/](https://wontothree.github.io/)
-- [https://wontothree.github.io/career/](https://wontothree.github.io/career/)
-
 It include parsing engine from Markdown and LaTex to HTML.
 
     wontothree.github.io
@@ -66,3 +63,4 @@ python -m http.server 8000
 
 * [ ] engine parsing markdown to html
 * [ ] 특정 폴더에 markdown file만 생성하면 자동으로 새 글이 게시되도록 하기
+
