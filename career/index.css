@@ -1,5 +1,3 @@
-/* styles.css */
-
 * {
     box-sizing: border-box;
     text-rendering: optimizeLegibility;
@@ -17,97 +15,92 @@
     padding: 0;
     line-height: 1.8rem;
     font-family: sans-serif;
+    background-color: white;
+    color: #1e1e1e;
+    font-family: 'Helvetica Neue';
+}
+
+/* font size by screen size */
+html {
+    font-size: 16px;
+}
+
+/* width < 1440px */
+@media (max-width: 1440px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/* width < 1200px */
+@media (max-width: 1200px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/* width < 1024px */
+@media (max-width: 1024px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/* width < 768px */
+@media (max-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/* width < 480px */
+@media (max-width: 480px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+/* print */
+@media print {
+    html {
+        font-size: 12px;
+    }
+}
+
+/* ------------------------------  custom ------------------------------ */
+
+/* -------------------- Tag style -------------------- */
+
+/* footor */
+footer {
+    text-align: center;
+    color: inherit;
 }
 
 /* link style */
 a {
     text-decoration: none;
     color: inherit;
-    color: #888;
 }
 
-.container {
-    max-width: 800px;
+/* -------------------- Class style -------------------- */
+
+/* Classs "base" */
+.base {
+    width: min(min(95%, 50rem), 70rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.3rem;
     margin: 0 auto;
-    padding: 2rem;
-}
-
-footer {
-    text-align: center;
-}
-
-/* font size according to screen size */
-html {
-    font-size: 16px;
-}
-@media (max-width: 1440px) { html { font-size: 14px; } }
-@media (max-width: 1200px) { html { font-size: 13px; } }
-@media (max-width: 1024px) { html { font-size: 12px; } }
-@media (max-width: 768px) { html { font-size: 11px; } }
-@media (max-width: 480px) { html { font-size: 10px; } }
-
-@media print {
-    html {
-        font-size: 10px;
-    }
-}
-
-/* custom */
-/* .intro {
-    width: fit-content;
-    margin: 0.5rem 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0.5rem;
-    align-items: center;
-} */
-.intro {
-    /* width: fit-content; */
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* padding: 0.5rem; */
-    align-items: center;
-    margin: 0.5rem 0;
 }
 
 /* box style */
-
-/* .box {
-    width: 45%; 
-    margin: 1rem 0; 
-    border: 1px solid #aaa;
-    padding: 0.5rem;
-    border-radius: 5px;
-} */
-
-/* new box style */
 .box {
-    width: 45%;                 /* 너비를 100%로 설정하여 부모 요소에 맞춤 */
+    width: 100%;                /* 너비를 100%로 설정하여 부모 요소에 맞춤 */
     margin: 1rem 0;             /* 위쪽과 아래쪽 여백 */
     border: 2px solid #444;
-    padding: 0.5rem;            /* between border and contents (rem, px)
-    /* padding: 15px;            /* between border and contents (rem, px) */
+    padding: 0.5rem;            /* between border and contents (rem, px) */
     border-radius: 5px;         /* rounding of border */
 }
-
-/* box size according to screen size  */
-@media (max-width: 1024px) {
-    .box {
-        width: 70%;
-    }
-}
-
-@media (max-width: 768px) {
-    .box {
-        width: 92%;
-    }
-}
-
-/* @media (max-width: 480px) {
-    .box {
-        width: 95%;
-    }
-} */
