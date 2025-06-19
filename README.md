@@ -2,24 +2,24 @@
 
 No dependencies (no framework, no library), just varnila javascript, html, and css.
 
-  wontothree.github.io/blog
-  ├── posts                                  # articles
-  │   ├── how-to-build-blog-from-a-to-z
-  │   │   └── 2025-06-08-ko.md
-  │   ├── compiler-parsing-latex-to-html
-  │   │   ├── 2025-06-10-en.md
-  │   │   └── 2025-06-10-ko.md
-  │
-  ├── scripts
-  │   ├── main.js
-  │   ├── postLoader.js
-  │   └── renderMarkdownToHtml.js
-  │
-  ├── styles
-  │   └── index.css
-  │
-  ├── index.html                             # single page application
-  └── posts-meta.json                        # post meta data (title, date, url, etc)
+    wontothree.github.io/blog
+    ├── posts                                  # articles
+    │   ├── how-to-build-blog-from-a-to-z
+    │   │   └── 2025-06-08-ko.md
+    │   ├── compiler-parsing-latex-to-html
+    │   │   ├── 2025-06-10-en.md
+    │   │   └── 2025-06-10-ko.md
+    │
+    ├── scripts
+    │   ├── main.js
+    │   ├── postLoader.js
+    │   └── renderMarkdownToHtml.js
+    │
+    ├── styles
+    │   └── index.css
+    │
+    ├── index.html                             # single page application
+    └── posts-meta.json                        # post meta data (title, date, url, etc)
 
 # Getting Started
 
