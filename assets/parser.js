@@ -5,7 +5,7 @@ function escapeHtml(str) {
         .replace(/>/g, "&gt;");
 }
 
-function parseMarkdownToHtml(markdown) {
+function convertMarkdownToHtml(markdown) {
     const lines = markdown.split('\n');
     const html_lines = [];
 
@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return response.text();
             })
             .then(md => {
-                const html = parseMarkdownToHtml(md);
+                const html = convertMarkdownToHtml(md);
                 contentEl.innerHTML = html;
             })
             .catch(err => {
@@ -185,9 +185,3 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
-
-
-// // export module
-// if (typeof module !== 'undefined' && module.exports) {
-//     module.exports = { parseMarkdownToHtml };
-// }
