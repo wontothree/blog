@@ -4,11 +4,10 @@ No dependencies (no framework, no library), just varnila javascript, html, and c
 
     wontothree.github.io/blog
     ├── posts                                  # articles
-    │   ├── how-to-build-blog-from-a-to-z
-    │   │   └── 2025-06-08-ko.md
-    │   ├── compiler-parsing-latex-to-html
-    │   │   ├── 2025-06-10-en.md
+    │   ├── realistic-goal-in-the-military
     │   │   └── 2025-06-10-ko.md
+    │   └── sewon-kim-and-anthony-garcia
+    │       └── 2025-06-10-ko.md
     │
     ├── scripts
     │   ├── main.js
