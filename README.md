@@ -24,22 +24,18 @@ No dependencies (no framework, no library), just varnila javascript, html, and c
 
 ## Posting
 
-1. `posts/` 경로에 게시물 제목으로 폴더를 생성한다. 이때 띄어쓰기는 hyphen으로 대체한다. 그러면 이 제목으로 blog에 자동으로 게시뮬 링크가 생성된다. e.g. `making-personal-blog`
-2. `posts/making-personal-blog`에 `2025-07-09-en.md`와 같은 양식으로 markdown file을 만든다. 이때 날짜와 시간을 표기하는 국제 규격 ISO 8601 `YYYY-MM-DD`를 따른다.
-
-## JSON
-
-`posts-meta.json`에서 다음의 내용을 작성한다.
+1. `posts/` 경로에 게시물 제목을 폴더명으로 폴더를 생성한다. 이때 폴더명은 영어로 하며 띄워쓰기는 hyphen으로 대체한다. 그러면 이 폴더명을 url로 갖는 게시물 링크가 blog에 자동으로 생성된다. e.g. `sewon-kim-and-anthony-garcia`
+2. 게시물 폴더에 `2025-07-09-ko.md` 와 같이 블로그 작성 날짜와 블로그 작성 언어를 조합하여 markdown 파일을 생성한다. 이때 날짜는 `YYYY-MM-DD` 양식의 국제 규격 `ISO 8601`을 따른다.
+3. Root 경로에 있는 `post-meta.json` 파일 가장 상단에 데이터를 다음과 같이 작성한다. `post-meta.json` 에서 상위에 있을수록 blog post list에서 상위에 노출된다.
 
 ```json
 [
   {
-    "folder": "making-personal-blog",
-    "filename": "2025-06-08-ko.md",
-
-    "title": "블로그를 A부터 Z까지 만드는 방법",
-    "date": "2025-06-08",
-    "language": "ko"
+    "folder": "sewon-kim-and-anthony-garcia",
+    "filename": "2025-06-10-en.md",
+    "title": "김세원과 Anthony Garcia",
+    "date": "2025-06-10",
+    "language": "en"
   }
 ]
 ```
