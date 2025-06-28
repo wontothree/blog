@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const file = post.file;
                 const title = post.title;
                 const date = post.date;
-                const lang = post.language;
+                // const lang = post.language;
                 // const filePath = `posts/${folder}/${date}-${lang}.md`;
                 const filePath = `posts/${folder}/${file}`;
 

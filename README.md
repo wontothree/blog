@@ -9,6 +9,7 @@ No dependencies (no framework, no library), just varnila javascript, html, and c
     │
     ├── scripts
     │   ├── main.js
+    │   ├── markdown-loader.js
     │   └── markdown-renderer.js
     │
     ├── styles
@@ -24,8 +25,3 @@ No dependencies (no framework, no library), just varnila javascript, html, and c
 ```bash
 python -m http.server 8000
 ```
-
-# To do
-
-* [ ] engine parsing markdown to html
-* [ ] 특정 폴더에 markdown file만 생성하면 자동으로 새 글이 게시되도록 하기
