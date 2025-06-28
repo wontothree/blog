@@ -16,6 +16,12 @@ export function loadMarkdown(path, contentEl, postListEl, options = {}) {
         const newUrl = `${window.location.pathname}?path=${encodeURIComponent(path)}`;
         window.history.pushState({}, '', newUrl);
     }
+    // if (!skipPushState) {
+    //     const segments = path.split('/'); // ['posts', 'folder-name', 'file.md']
+    //     const folderName = segments[1]; // 폴더명만 추출
+    //     const newUrl = `/${folderName}/`; // /folder-name/ 형태로 변경
+    //     window.history.pushState({}, '', newUrl);
+    // }
 
     fetch(path)
         .then(response => {
