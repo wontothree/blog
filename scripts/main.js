@@ -15,12 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
             postListEl.innerHTML = posts.map(post => {
                 const folder = post.folder;
-                const file = post.file;
+                // const file = post.file;
                 const title = post.title;
                 const date = post.date;
-                // const lang = post.language;
-                // const filePath = `posts/${folder}/${date}-${lang}.md`;
-                const filePath = `posts/${folder}/${file}`;
+                const lang = post.language;
+                const filePath = `posts/${folder}/${date}-${lang}.md`;
+                // const filePath = `posts/${folder}/${file}`;
 
                 return `
                     <div class="post-link" data-path="${filePath}" style="cursor: pointer; display: flex; justify-content: space-between; white-space: nowrap; margin: 5px 0;">
